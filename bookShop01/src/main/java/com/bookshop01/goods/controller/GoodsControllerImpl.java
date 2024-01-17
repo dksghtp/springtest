@@ -61,7 +61,7 @@ public class GoodsControllerImpl extends BaseController   implements GoodsContro
 		GoodsVO goodsVO=(GoodsVO)goodsMap.get("goodsVO");
 		addGoodsInQuick(goods_id,goodsVO,session);
 		
-		//최종적으로 구성된 ModelAndView 객체를 반환합니다. 이 객체는 뷰의 이름과 상품 정보를 가지고 있습니다.
+		// 최종적으로 구성된 ModelAndView 객체를 반환합니다. 이 객체는 뷰의 이름과 상품 정보를 가지고 있습니다.
 		return mav;
 	}
 	
