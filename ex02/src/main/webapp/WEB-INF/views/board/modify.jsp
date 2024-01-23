@@ -27,13 +27,13 @@
 	</div>
 	<div class="form-group">
 		<label>RegDate</label> <input class="form-control" name="regDate"
-			value='<fmt:formatDate pattern="yyyy-MM-dd"
+			value='<fmt:formatDate pattern="yyyy/MM/dd"
 				value="${board.regdate }" />'
 			readonly="readonly">
 	</div>
 	<div class="form-group">
 		<label>Update</label> <input class="form-control" name="updateDate"
-			value='<fmt:formatDate pattern="yyyy-MM-dd"
+			value='<fmt:formatDate pattern="yyyy/MM/dd"
 				value="${board.updateDate }" />'
 			readonly="readonly">
 	</div>
@@ -60,8 +60,10 @@
 				formObj.attr("action", "/board/remove");
 			} else if (operation == 'list') {
 				//move to list
-				self.location = "/board/list";
-				return;
+				//self.location = "/board/list";
+				formObj.attr("action", "/board/list").attr("method", "get");
+				formObj.empty();
+				
 			}
 			formObj.submit();
 		});
